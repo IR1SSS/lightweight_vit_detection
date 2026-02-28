@@ -1,0 +1,5 @@
+[console_scripts]
+lvit-distill = scripts.distill:main
+lvit-eval = scripts.evaluate:main
+lvit-infer = scripts.inference:main
+lvit-train = scripts.train:main
