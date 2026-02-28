@@ -1,0 +1,4 @@
+2026-02-26 23:23:56 - src.training.trainer - INFO - Starting training for 1 epochs
+2026-02-26 23:24:49 - src.training.trainer - INFO -   Batch 50/29316 - Loss: 1344.6286 - Time: 52.93s
+2026-02-26 23:25:02 - src.training.trainer - INFO -   Batch 100/29316 - Loss: 1334.0393 - Time: 66.13s
+2026-02-26 23:25:09 - src.training.trainer - INFO - Epoch 1/1 - Train Loss: 1334.0393

@@ -1,0 +1,31 @@
+# EfficientFormer Model Configuration
+# 轻量化视觉Transformer实时物体检测系统 - EfficientFormer配置
+# 预留配置文件，后续实现
+
+model:
+  name: "efficientformer_detection"
+  type: "efficientformer"
+  
+  # 输入配置
+  input:
+    image_size: [640, 640]
+    channels: 3
+    normalize:
+      mean: [0.485, 0.456, 0.406]
+      std: [0.229, 0.224, 0.225]
+
+  # 骨干网络配置（预留）
+  backbone:
+    name: "efficientformer_l1"  # efficientformer_l1, l3, l7
+    pretrained: true
+    pretrained_path: ""
+    
+  # Neck配置
+  neck:
+    type: "fpn"
+    out_channels: 256
+    
+  # 检测头配置
+  head:
+    type: "retina"
+    num_classes: 80

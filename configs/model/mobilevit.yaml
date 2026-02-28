@@ -1,0 +1,76 @@
+# MobileViT Model Configuration
+# 轻量化视觉Transformer实时物体检测系统 - MobileViT配置
+
+model:
+  name: "mobilevit_detection"
+  type: "mobilevit"
+  
+  # 输入配置
+  input:
+    image_size: [640, 640]  # 输入图像尺寸 [H, W]
+    channels: 3
+    normalize:
+      mean: [0.485, 0.456, 0.406]
+      std: [0.229, 0.224, 0.225]
+
+  # 骨干网络配置
+  backbone:
+    name: "mobilevit_s"  # mobilevit_xxs, mobilevit_xs, mobilevit_s
+    pretrained: true
+    pretrained_path: ""  # 预训练权重路径
+    
+    # MobileViT块配置
+    mobilevit_block:
+      dims: [96, 128, 160]  # 各阶段维度
+      depths: [2, 4, 3]     # 各阶段Transformer块数量
+      expansion: 4          # MLP扩展比例
+      kernel_size: 3        # 卷积核大小
+      patch_size: 2         # Patch大小
+      
+    # MobileNetV2配置
+    mv2_block:
+      channels: [16, 32, 48, 64, 80, 96]
+      expansion: 4
+      
+  # Neck配置（特征金字塔）
+  neck:
+    type: "fpn"  # fpn, bifpn, pan
+    in_channels: [96, 128, 160]
+    out_channels: 256
+    num_outs: 5
+    
+  # 检测头配置
+  head:
+    type: "retina"  # retina, fcos, yolo
+    num_classes: 80  # COCO类别数
+    in_channels: 256
+    feat_channels: 256
+    stacked_convs: 4
+    
+    # Anchor配置
+    anchor:
+      scales: [8]
+      ratios: [0.5, 1.0, 2.0]
+      strides: [8, 16, 32, 64, 128]
+      
+    # 损失函数配置
+    loss:
+      cls_loss:
+        type: "focal_loss"
+        alpha: 0.25
+        gamma: 2.0
+      reg_loss:
+        type: "smooth_l1"
+        beta: 1.0
+      
+  # 后处理配置
+  postprocess:
+    score_threshold: 0.05
+    nms_threshold: 0.5
+    max_per_img: 100
+
+# 模型复杂度目标
+complexity:
+  target_params: 5000000    # 目标参数量 < 5M
+  target_flops: 1000000000  # 目标FLOPs < 1G
+  target_model_size: 50     # 目标模型大小 < 50MB

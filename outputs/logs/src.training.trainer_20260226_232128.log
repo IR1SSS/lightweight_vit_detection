@@ -1,0 +1,9 @@
+2026-02-26 23:21:28 - src.training.trainer - INFO - Starting training for 1 epochs
+2026-02-26 23:22:12 - src.training.trainer - INFO -   Batch 50/29316 - Loss: 1312.0490 - Time: 43.88s
+2026-02-26 23:22:49 - src.training.trainer - INFO -   Batch 100/29316 - Loss: 1323.1895 - Time: 81.18s
+2026-02-26 23:23:03 - src.training.trainer - INFO -   Batch 150/29316 - Loss: 1320.9011 - Time: 94.91s
+2026-02-26 23:23:16 - src.training.trainer - INFO -   Batch 200/29316 - Loss: 1321.4732 - Time: 108.10s
+2026-02-26 23:23:30 - src.training.trainer - INFO -   Batch 250/29316 - Loss: 1321.0496 - Time: 121.83s
+2026-02-26 23:23:43 - src.training.trainer - INFO -   Batch 300/29316 - Loss: 1324.5065 - Time: 135.53s
+2026-02-26 23:23:57 - src.training.trainer - INFO -   Batch 350/29316 - Loss: 1320.9285 - Time: 148.89s
+2026-02-26 23:24:10 - src.training.trainer - INFO -   Batch 400/29316 - Loss: 1318.0164 - Time: 162.27s

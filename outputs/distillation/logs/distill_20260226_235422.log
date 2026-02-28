@@ -1,0 +1,25 @@
+2026-02-26 23:54:22 - distill - INFO - ============================================================
+2026-02-26 23:54:22 - distill - INFO - Knowledge Distillation Training
+2026-02-26 23:54:22 - distill - INFO - ============================================================
+2026-02-26 23:54:22 - distill - INFO - Loading config from: configs/training/distillation.yaml
+2026-02-26 23:54:22 - distill - INFO - Using device: cuda
+2026-02-26 23:54:22 - distill - INFO - Loading teacher model...
+2026-02-26 23:54:23 - distill - INFO - Teacher model loaded and frozen
+2026-02-26 23:54:23 - distill - INFO - Building student model...
+2026-02-26 23:54:23 - distill - INFO - Student parameters: 11.46M
+2026-02-26 23:54:23 - distill - INFO - Building distiller...
+2026-02-26 23:54:23 - distill - INFO - Building datasets...
+2026-02-26 23:54:23 - distill - INFO - Starting distillation training for 5 epochs...
+2026-02-26 23:54:23 - distill - INFO - Epoch 1/5
+2026-02-26 23:55:21 - distill - INFO -   Train: loss_cls: 4.2832 | loss_bbox: 1302.3396 | loss_total: 1306.6228 | loss_response: 0.0000 | loss_feature: 0.0000
+2026-02-26 23:55:21 - distill - INFO - Epoch 2/5
+2026-02-26 23:56:18 - distill - INFO -   Train: loss_cls: 2.3067 | loss_bbox: 1292.0859 | loss_total: 1294.3926 | loss_response: 0.0000 | loss_feature: 0.0000
+2026-02-26 23:56:18 - distill - INFO - Epoch 3/5
+2026-02-26 23:57:15 - distill - INFO -   Train: loss_cls: 2.0945 | loss_bbox: 1281.7130 | loss_total: 1283.8074 | loss_response: 0.0000 | loss_feature: 0.0000
+2026-02-26 23:57:15 - distill - INFO - Epoch 4/5
+2026-02-26 23:58:12 - distill - INFO -   Train: loss_cls: 2.0677 | loss_bbox: 1266.6397 | loss_total: 1268.7074 | loss_response: 0.0000 | loss_feature: 0.0000
+2026-02-26 23:58:12 - distill - INFO - Epoch 5/5
+2026-02-26 23:59:08 - distill - INFO -   Train: loss_cls: 2.0583 | loss_bbox: 1238.6086 | loss_total: 1240.6669 | loss_response: 0.0000 | loss_feature: 0.0000
+2026-02-26 23:59:08 - distill - INFO - ============================================================
+2026-02-26 23:59:08 - distill - INFO - Distillation training complete!
+2026-02-26 23:59:08 - distill - INFO - ============================================================

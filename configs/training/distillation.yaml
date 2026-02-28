@@ -1,0 +1,77 @@
+# Knowledge Distillation Training Configuration
+# 轻量化视觉Transformer实时物体检测系统 - 知识蒸馏配置
+
+# 蒸馏开关
+distillation:
+  enabled: true
+  
+  # 教师模型配置
+  teacher:
+    model_type: "detr"  # detr, faster_rcnn, yolov5
+    model_path: "models/teacher_detr.pth"
+    freeze: true  # 冻结教师模型
+    
+  # 学生模型配置
+  student:
+    config_path: "configs/model/mobilevit.yaml"
+    
+  # 蒸馏策略
+  strategy:
+    type: "multi_level"  # response, feature, relation, multi_level
+    
+    # 响应蒸馏（输出层）
+    response_distillation:
+      enabled: true
+      temperature: 4.0
+      weight: 1.0
+      
+    # 特征蒸馏（中间层）
+    feature_distillation:
+      enabled: true
+      weight: 0.5
+      layers: ["backbone.layer2", "backbone.layer3", "backbone.layer4"]
+      align_type: "conv1x1"  # conv1x1, adaptive_pool
+      
+    # 关系蒸馏
+    relation_distillation:
+      enabled: false
+      weight: 0.1
+      
+# 训练配置
+training:
+  epochs: 300
+  batch_size: 4
+  num_workers: 4
+  
+  # 优化器配置
+  optimizer:
+    type: "adamw"
+    lr: 0.0001
+    weight_decay: 0.05
+    betas: [0.9, 0.999]
+    
+  # 学习率调度
+  scheduler:
+    type: "cosine"
+    warmup_epochs: 5
+    min_lr: 0.00001
+    
+  # 损失函数权重
+  loss_weights:
+    detection: 1.0
+    distillation: 0.5
+    
+# 数据配置
+data:
+  dataset: "coco"
+  train_path: "data/coco/train2017"
+  val_path: "data/coco/val2017"
+  ann_train: "data/coco/annotations/instances_train2017.json"
+  ann_val: "data/coco/annotations/instances_val2017.json"
+  
+# 日志和保存
+output:
+  save_dir: "outputs/distillation"
+  log_interval: 50
+  save_interval: 10
+  eval_interval: 5

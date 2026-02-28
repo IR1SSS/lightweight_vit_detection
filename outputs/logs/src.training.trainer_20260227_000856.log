@@ -1,0 +1,17 @@
+2026-02-27 00:08:56 - src.training.trainer - INFO - Starting training for 5 epochs
+2026-02-27 00:09:15 - src.training.trainer - INFO -   Batch 50/125 - Loss: 1329.9649 - Time: 18.69s
+2026-02-27 00:09:33 - src.training.trainer - INFO -   Batch 100/125 - Loss: 1321.1570 - Time: 36.71s
+2026-02-27 00:09:33 - src.training.trainer - INFO - Epoch 1/5 - Train Loss: 1321.1570
+2026-02-27 00:09:52 - src.training.trainer - INFO -   Batch 50/125 - Loss: 1318.7738 - Time: 18.69s
+2026-02-27 00:10:10 - src.training.trainer - INFO -   Batch 100/125 - Loss: 1341.1469 - Time: 36.87s
+2026-02-27 00:10:10 - src.training.trainer - INFO - Epoch 2/5 - Train Loss: 1341.1469
+2026-02-27 00:10:28 - src.training.trainer - INFO -   Batch 50/125 - Loss: 1341.1676 - Time: 18.04s
+2026-02-27 00:10:46 - src.training.trainer - INFO -   Batch 100/125 - Loss: 1328.3409 - Time: 36.07s
+2026-02-27 00:10:46 - src.training.trainer - INFO - Epoch 3/5 - Train Loss: 1328.3409
+2026-02-27 00:11:04 - src.training.trainer - INFO -   Batch 50/125 - Loss: 1331.2016 - Time: 17.92s
+2026-02-27 00:11:22 - src.training.trainer - INFO -   Batch 100/125 - Loss: 1317.0906 - Time: 35.89s
+2026-02-27 00:11:22 - src.training.trainer - INFO - Epoch 4/5 - Train Loss: 1317.0906
+2026-02-27 00:11:40 - src.training.trainer - INFO -   Batch 50/125 - Loss: 1317.3370 - Time: 17.92s
+2026-02-27 00:11:58 - src.training.trainer - INFO -   Batch 100/125 - Loss: 1319.0990 - Time: 35.92s
+2026-02-27 00:11:58 - src.training.trainer - INFO - Epoch 5/5 - Train Loss: 1319.0990
+2026-02-27 00:12:20 - src.training.trainer - INFO - Epoch 5/5 - Val mAP: 0.0000
