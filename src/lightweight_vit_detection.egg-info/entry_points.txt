@@ -1,0 +1,5 @@
+[console_scripts]
+vit-demo = tools.demo:main
+vit-evaluate = tools.evaluate:main
+vit-export = tools.export_model:main
+vit-train = tools.train:main

@@ -1,0 +1,40 @@
+# ONNX Export Configuration
+
+export:
+  format: "onnx"
+  output_path: "./exports/model.onnx"
+  
+# Model configuration
+model:
+  config: "configs/model/mobilevit_small.yaml"
+  weights: "./outputs/best_model.pth"
+  
+# Export settings
+onnx:
+  opset_version: 14
+  dynamic_axes:
+    input:
+      0: "batch_size"
+      2: "height"
+      3: "width"
+    output:
+      0: "batch_size"
+  input_names: ["input"]
+  output_names: ["boxes", "scores", "labels"]
+  
+  # Optimization settings
+  optimize: true
+  simplify: true
+  
+# Input specification
+input:
+  batch_size: 1
+  channels: 3
+  height: 320
+  width: 320
+  
+# Quantization
+quantization:
+  enabled: false
+  calibration_data: "./data/calibration"
+  num_calibration_samples: 500

@@ -1,0 +1,51 @@
+# EfficientFormerV2-S1 Model Configuration
+# Vision Transformers for MobileNet Size and Speed (ICCV 2023)
+
+model:
+  name: "efficientformerv2_s1"
+  type: "detector"
+  
+  # Backbone configuration
+  backbone:
+    name: "efficientformerv2_s1"
+    model_size: "S1"  # S0, S1, S2, L
+    image_size: 224
+    
+    # EfficientFormerV2-S1 architecture
+    # layers: [3, 3, 9, 6]
+    # embed_dims: [32, 48, 120, 224]
+    # vit_num: 2 (last 2 stages use attention)
+
+  # Feature Pyramid Network
+  neck:
+    name: "fpn"
+    in_channels: [48, 120, 224]  # V2-S1 output channels
+    out_channels: 128
+    num_levels: 3
+    
+  # Detection Head
+  head:
+    name: "detection_head"
+    num_classes: 80
+    num_anchors: 3
+    num_convs: 4
+    in_channels: 128
+    use_depthwise: true
+    
+  # Attention configuration
+  attention:
+    type: "efficient"  # EfficientFormerV2 uses efficient attention
+    num_heads: 8
+    dropout: 0.0
+    use_flash_attention: false
+
+# Model size estimation
+params:
+  total: ~6.1M
+  size_mb: ~24
+
+# Performance targets
+targets:
+  mAP_50: 0.79
+  fps: 40
+  memory_mb: 300

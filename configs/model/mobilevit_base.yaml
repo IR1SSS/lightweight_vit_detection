@@ -1,0 +1,76 @@
+# MobileViT-Base Model Configuration
+# Larger model for higher accuracy
+
+model:
+  name: "mobilevit_base"
+  type: "detector"
+  
+  # Backbone configuration
+  backbone:
+    name: "mobilevit_base"
+    image_size: 384
+    patch_size: 2
+    width_multiplier: 1.0
+    
+    # MobileViT blocks configuration
+    blocks:
+      - type: "mv2"
+        out_channels: 32
+        stride: 1
+        num_blocks: 1
+      - type: "mv2"
+        out_channels: 64
+        stride: 2
+        num_blocks: 3
+      - type: "mobilevit"
+        out_channels: 128
+        stride: 2
+        transformer_channels: 192
+        transformer_blocks: 2
+        patch_size: 2
+      - type: "mobilevit"
+        out_channels: 160
+        stride: 2
+        transformer_channels: 240
+        transformer_blocks: 4
+        patch_size: 2
+      - type: "mobilevit"
+        out_channels: 224
+        stride: 2
+        transformer_channels: 336
+        transformer_blocks: 3
+        patch_size: 2
+
+  # Feature Pyramid Network
+  neck:
+    name: "fpn"
+    in_channels: [128, 160, 224]
+    out_channels: 192
+    num_levels: 3
+    
+  # Detection Head
+  head:
+    name: "detection_head"
+    num_classes: 80
+    num_anchors: 3
+    num_convs: 4
+    in_channels: 192
+    use_depthwise: true
+    
+  # Lightweight attention settings
+  attention:
+    type: "linear"
+    num_heads: 4
+    dropout: 0.1
+    use_flash_attention: false
+
+# Model size estimation
+params:
+  total: ~11.2M
+  size_mb: ~44
+
+# Performance targets
+targets:
+  mAP_50: 0.78
+  fps: 25
+  memory_mb: 600

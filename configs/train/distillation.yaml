@@ -1,0 +1,121 @@
+# Knowledge Distillation Training Configuration
+
+# Experiment settings
+experiment:
+  name: "mobilevit_distillation"
+  output_dir: "./outputs/distillation"
+  seed: 42
+  deterministic: true
+
+# Teacher model configuration
+# Using EfficientFormerV2-S1 (6.1M params, 79.7% ImageNet top-1)
+# Pretrained weights from: https://github.com/snap-research/EfficientFormer
+teacher:
+  type: "efficientformerv2_s1"  # Use EfficientFormerV2-S1 as teacher
+  weights: "./weights/eformer_s1_450.pth"  # Pretrained weights path
+  resolution: 224  # Teacher model input resolution
+  freeze: true
+  
+# Student model configuration
+student:
+  config: "configs/model/mobilevit_small.yaml"
+  weights: null  # Random initialization or pretrained backbone
+
+# Dataset configuration
+data:
+  train_dataset: "coco"
+  val_dataset: "coco"
+  train_root: "data/coco/train2017"
+  val_root: "data/coco/val2017"
+  train_ann: "data/coco/annotations/instances_train2017.json"
+  val_ann: "data/coco/annotations/instances_val2017.json"
+  
+  image_size: 320
+  batch_size: 16  # Conservative for distillation stability
+  num_workers: 0  # Windows: must be 0, Linux can use 8+
+  
+  # Data augmentation (disabled mosaic to prevent 4x memory usage)
+  augmentation:
+    mosaic: false
+    mosaic_prob: 0.0
+    mixup: false
+    mixup_prob: 0.0
+    random_affine: true
+    hsv_augment: true
+    flip_prob: 0.5
+    scale_range: [0.5, 1.5]
+
+# Training configuration
+training:
+  epochs: 50  # Sufficient for distillation with pretrained teacher
+  warmup_epochs: 5  # Increased for stability
+  gradient_clip: 0.5  # Reduced to prevent gradient explosion
+  accumulation_steps: 1
+  
+  # Optimizer
+  optimizer:
+    type: "adamw"
+    lr: 0.00005  # Reduced by half for stability
+    weight_decay: 0.05
+    betas: [0.9, 0.999]
+    
+  # Learning rate scheduler
+  scheduler:
+    type: "cosine"
+    min_lr: 1e-6
+    warmup_lr: 1e-5
+    
+  # Gradient checkpointing for memory efficiency
+  gradient_checkpointing: false
+
+# Distillation configuration
+distillation:
+  enabled: true
+  
+  # Distillation strategies
+  strategies:
+    # Response-based distillation (logits)
+    response:
+      enabled: true
+      weight: 1.0
+      temperature: 4.0
+      
+    # Feature-based distillation
+    feature:
+      enabled: true
+      weight: 0.5
+      layers: [2, 3, 4]  # Distill from these layers
+      loss_type: "mse"  # mse, cosine, l1
+      
+    # Relation-based distillation
+    relation:
+      enabled: true
+      weight: 0.3
+      loss_type: "spatial_attention"  # spatial_attention, channel_attention
+
+  # Loss weights
+  loss_weights:
+    detection_loss: 1.0
+    distill_loss: 1.0  # Reduced from 2.0 for stability
+    
+# Evaluation configuration
+evaluation:
+  eval_interval: 1  # Evaluate and save every epoch
+  save_best: true
+  save_last: true
+  metrics:
+    - "mAP"
+    - "mAP_50"
+    - "mAP_75"
+
+# Logging configuration
+logging:
+  log_interval: 100  # Log every N iterations
+  tensorboard: true
+  wandb: false
+  wandb_project: "lightweight_vit"
+  
+# Checkpoint configuration
+checkpoint:
+  save_interval: 10  # Save every N epochs
+  max_checkpoints: 5  # Keep max N checkpoints

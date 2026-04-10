@@ -1,0 +1,348 @@
+2026-03-31 11:19:52 | INFO     | vit_detection:91 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 11:19:52 | INFO     | vit_detection:92 | Output directory: ./outputs/distillation
+2026-03-31 11:19:52 | INFO     | vit_detection:96 | Using device: cpu
+2026-03-31 11:19:52 | INFO     | vit_detection:105 | Creating data loaders...
+2026-03-31 11:19:58 | INFO     | vit_detection:115 | Train dataset size: 118287
+2026-03-31 11:19:58 | INFO     | vit_detection:116 | Val dataset size: 5000
+2026-03-31 11:19:58 | INFO     | vit_detection:119 | Building student model...
+2026-03-31 11:26:12 | INFO     | vit_detection:91 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 11:26:12 | INFO     | vit_detection:92 | Output directory: ./outputs/distillation
+2026-03-31 11:26:12 | INFO     | vit_detection:96 | Using device: cuda
+2026-03-31 11:26:12 | INFO     | vit_detection:105 | Creating data loaders...
+2026-03-31 11:26:18 | INFO     | vit_detection:115 | Train dataset size: 118287
+2026-03-31 11:26:18 | INFO     | vit_detection:116 | Val dataset size: 5000
+2026-03-31 11:26:18 | INFO     | vit_detection:119 | Building student model...
+2026-03-31 11:26:18 | INFO     | vit_detection:122 | Student model: mobilevit_small
+2026-03-31 11:26:18 | INFO     | vit_detection:123 | Student parameters: 2,086,567
+2026-03-31 11:26:18 | INFO     | vit_detection:127 | Building teacher model...
+2026-03-31 11:31:26 | INFO     | vit_detection:91 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 11:31:26 | INFO     | vit_detection:92 | Output directory: ./outputs/distillation
+2026-03-31 11:31:26 | INFO     | vit_detection:96 | Using device: cuda
+2026-03-31 11:31:26 | INFO     | vit_detection:105 | Creating data loaders...
+2026-03-31 11:31:33 | INFO     | vit_detection:115 | Train dataset size: 118287
+2026-03-31 11:31:33 | INFO     | vit_detection:116 | Val dataset size: 5000
+2026-03-31 11:31:33 | INFO     | vit_detection:119 | Building student model...
+2026-03-31 11:31:33 | INFO     | vit_detection:122 | Student model: mobilevit_small
+2026-03-31 11:31:33 | INFO     | vit_detection:123 | Student parameters: 2,086,567
+2026-03-31 11:31:33 | INFO     | vit_detection:137 | Building teacher model...
+2026-03-31 11:31:33 | INFO     | vit_detection:151 | Teacher parameters: 11,091,327
+2026-03-31 11:31:34 | INFO     | vit_detection:208 | Starting training...
+2026-03-31 11:32:13 | INFO     | vit_detection:91 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 11:32:13 | INFO     | vit_detection:92 | Output directory: ./outputs/distillation
+2026-03-31 11:32:13 | INFO     | vit_detection:96 | Using device: cuda
+2026-03-31 11:32:13 | INFO     | vit_detection:105 | Creating data loaders...
+2026-03-31 11:32:19 | INFO     | vit_detection:115 | Train dataset size: 118287
+2026-03-31 11:32:19 | INFO     | vit_detection:116 | Val dataset size: 5000
+2026-03-31 11:32:19 | INFO     | vit_detection:119 | Building student model...
+2026-03-31 11:32:19 | INFO     | vit_detection:122 | Student model: mobilevit_small
+2026-03-31 11:32:19 | INFO     | vit_detection:123 | Student parameters: 2,086,567
+2026-03-31 11:32:19 | WARNING  | vit_detection:135 | Teacher weights path not configured (teacher.weights is null).
+2026-03-31 11:32:19 | WARNING  | vit_detection:136 | Falling back to standard training without distillation.
+2026-03-31 11:32:20 | INFO     | vit_detection:213 | Starting training...
+2026-03-31 12:28:11 | INFO     | vit_detection:92 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 12:28:11 | INFO     | vit_detection:93 | Output directory: ./outputs/distillation
+2026-03-31 12:28:11 | INFO     | vit_detection:97 | Using device: cuda
+2026-03-31 12:28:11 | INFO     | vit_detection:106 | Creating data loaders...
+2026-03-31 12:28:17 | INFO     | vit_detection:116 | Train dataset size: 118287
+2026-03-31 12:28:17 | INFO     | vit_detection:117 | Val dataset size: 5000
+2026-03-31 12:28:17 | INFO     | vit_detection:120 | Building student model...
+2026-03-31 12:30:30 | INFO     | vit_detection:99 | Configuration loaded from: configs\train\distillation.yaml
+2026-03-31 12:30:30 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:30:30 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:30:30 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:30:30 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:30:36 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:30:36 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:30:36 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:30:36 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:30:36 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:30:36 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:30:36 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:30:37 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:30:37 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:30:37 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:31:08 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 12:31:08 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:31:08 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:31:08 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:31:08 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:31:14 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:31:14 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:31:14 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:31:14 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:31:14 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:31:14 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:31:14 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:31:14 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:31:14 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:31:14 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:32:14 | INFO     | vit_detection:99 | Configuration loaded from: configs\train\distillation.yaml
+2026-03-31 12:32:14 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:32:14 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:32:14 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:32:14 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:32:20 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:32:20 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:32:20 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:32:20 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:32:20 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:32:20 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:32:20 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:32:20 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:32:20 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:32:21 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:33:01 | INFO     | vit_detection:99 | Configuration loaded from: configs\train\distillation.yaml
+2026-03-31 12:33:01 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:33:01 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:33:01 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:33:01 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:33:07 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:33:07 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:33:07 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:33:07 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:33:07 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:33:07 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:33:08 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:33:08 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:33:08 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:33:08 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:35:13 | INFO     | vit_detection:99 | Configuration loaded from: configs\train\distillation.yaml
+2026-03-31 12:35:13 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:35:13 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:35:14 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:35:14 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:37:02 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:37:02 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:37:02 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:37:02 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:37:02 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:37:02 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:37:02 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:37:02 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:37:02 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:37:02 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:48:27 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 12:48:27 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:48:27 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:48:27 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:48:27 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:48:33 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:48:33 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:48:33 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:48:33 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:48:33 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:48:33 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:48:34 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:48:34 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:48:34 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:48:34 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:52:41 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 12:52:41 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:52:41 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:52:41 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:52:41 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:52:47 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:52:47 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:52:47 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:52:47 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:52:47 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:52:47 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:52:48 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:52:48 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:52:48 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:52:48 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 12:59:34 | INFO     | vit_detection:99 | Configuration loaded from: configs\train\distillation.yaml
+2026-03-31 12:59:34 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 12:59:34 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 12:59:34 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 12:59:34 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 12:59:41 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 12:59:41 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 12:59:41 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 12:59:41 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 12:59:41 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 12:59:41 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 12:59:41 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 12:59:41 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 12:59:41 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 12:59:41 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:04:20 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:04:20 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:04:20 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:04:21 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:04:21 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:04:27 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:04:27 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:04:27 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:04:27 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:04:27 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:04:27 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:04:27 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:04:27 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:04:27 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:04:27 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:07:09 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:07:09 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:07:09 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:07:09 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:07:09 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:07:15 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:07:15 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:07:15 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:07:15 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:07:15 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:07:15 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:07:15 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:07:15 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:07:15 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:07:15 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:08:42 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:08:42 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:08:42 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:08:42 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:08:42 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:08:48 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:08:48 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:08:48 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:08:48 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:08:48 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:08:48 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:08:48 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:08:48 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:08:48 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:08:48 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:10:08 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:10:08 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:10:08 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:10:08 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:10:08 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:10:14 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:10:14 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:10:14 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:10:14 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:10:14 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:10:14 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:10:14 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:10:14 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:10:14 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:10:14 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:19:15 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:19:15 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:19:15 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:19:15 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:19:15 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:19:21 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:19:21 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:19:21 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:19:21 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:19:21 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:19:21 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:19:21 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:19:22 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:19:22 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:19:22 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:28:24 | INFO     | vit_detection:99 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:28:24 | INFO     | vit_detection:101 | Model config: mobilevit_small
+2026-03-31 13:28:24 | INFO     | vit_detection:102 | Output directory: ./outputs/distillation
+2026-03-31 13:28:24 | INFO     | vit_detection:106 | Using device: cuda
+2026-03-31 13:28:24 | INFO     | vit_detection:115 | Creating data loaders...
+2026-03-31 13:28:29 | INFO     | vit_detection:125 | Train dataset size: 118287
+2026-03-31 13:28:29 | INFO     | vit_detection:126 | Val dataset size: 5000
+2026-03-31 13:28:29 | INFO     | vit_detection:129 | Building student model...
+2026-03-31 13:28:29 | INFO     | vit_detection:131 | Student model: mobilevit_small
+2026-03-31 13:28:29 | INFO     | vit_detection:132 | Student parameters: 2,078,119
+2026-03-31 13:28:29 | INFO     | vit_detection:141 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:28:30 | INFO     | vit_detection:147 | Teacher parameters: 5,735,960
+2026-03-31 13:28:30 | INFO     | vit_detection:195 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:28:30 | INFO     | vit_detection:200 | Student channels: [80, 160, 320]
+2026-03-31 13:28:30 | INFO     | vit_detection:237 | Starting training...
+2026-03-31 13:31:33 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:31:33 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:31:33 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:31:33 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:31:33 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:31:39 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:31:39 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:31:39 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:31:39 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:31:39 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:31:39 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:31:40 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:31:40 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:31:40 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:31:40 | INFO     | vit_detection:246 | Starting training...
+2026-03-31 13:33:33 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:33:33 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:33:33 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:33:34 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:33:34 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:33:40 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:33:40 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:33:40 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:33:40 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:33:40 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:33:40 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:33:40 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:33:40 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:33:40 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:33:40 | INFO     | vit_detection:246 | Starting training...
+2026-03-31 13:37:26 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:37:26 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:37:26 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:37:26 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:37:26 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:37:32 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:37:32 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:37:32 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:37:32 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:37:32 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:37:32 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:37:32 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:37:33 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:37:33 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:37:33 | INFO     | vit_detection:246 | Starting training...
+2026-03-31 13:40:07 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:40:07 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:40:07 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:40:07 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:40:07 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:40:13 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:40:13 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:40:13 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:40:13 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:40:13 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:40:13 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:40:13 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:40:13 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:40:13 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:40:13 | INFO     | vit_detection:247 | Starting training...
+2026-03-31 13:43:34 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:43:34 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:43:34 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:43:34 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:43:34 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:43:41 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:43:41 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:43:41 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:43:41 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:43:41 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:43:41 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:43:41 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:43:41 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:43:41 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:43:41 | INFO     | vit_detection:247 | Starting training...
+2026-03-31 13:47:23 | INFO     | vit_detection:108 | Configuration loaded from: configs/train/distillation.yaml
+2026-03-31 13:47:23 | INFO     | vit_detection:110 | Model config: mobilevit_small
+2026-03-31 13:47:23 | INFO     | vit_detection:111 | Output directory: ./outputs/distillation
+2026-03-31 13:47:23 | INFO     | vit_detection:115 | Using device: cuda
+2026-03-31 13:47:23 | INFO     | vit_detection:124 | Creating data loaders...
+2026-03-31 13:47:29 | INFO     | vit_detection:134 | Train dataset size: 118287
+2026-03-31 13:47:29 | INFO     | vit_detection:135 | Val dataset size: 5000
+2026-03-31 13:47:29 | INFO     | vit_detection:138 | Building student model...
+2026-03-31 13:47:29 | INFO     | vit_detection:140 | Student model: mobilevit_small
+2026-03-31 13:47:29 | INFO     | vit_detection:141 | Student parameters: 2,078,119
+2026-03-31 13:47:29 | INFO     | vit_detection:150 | Building EfficientFormerV2-S1 teacher model...
+2026-03-31 13:47:29 | INFO     | vit_detection:156 | Teacher parameters: 5,735,960
+2026-03-31 13:47:30 | INFO     | vit_detection:204 | Teacher channels (EfficientFormerV2-S1): [32, 48, 120, 224]
+2026-03-31 13:47:30 | INFO     | vit_detection:209 | Student channels: [80, 160, 320]
+2026-03-31 13:47:30 | INFO     | vit_detection:247 | Starting training...
